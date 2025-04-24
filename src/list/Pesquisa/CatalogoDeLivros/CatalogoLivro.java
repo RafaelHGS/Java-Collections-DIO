@@ -1,4 +1,4 @@
-package list.Ordenacao.CatalogoDeLivros;
+package list.Pesquisa.CatalogoDeLivros;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +49,19 @@ public class CatalogoLivro {
             }
         }
         return  livroPorTitulo;
+    }
+
+    public static void main(String[] args) {
+        CatalogoLivro catalogoLivros = new CatalogoLivro();
+        catalogoLivros.adicionarLivro("Livro 1", "Autor1", 2020);
+        catalogoLivros.adicionarLivro("Livro 1", "Autor2", 2021);
+        catalogoLivros.adicionarLivro("Livro 2", "Autor2", 2022);
+        catalogoLivros.adicionarLivro("Livro 3", "Autor3", 2023);
+        catalogoLivros.adicionarLivro("Livro 4", "Autor4", 1994);
+
+        System.out.println(catalogoLivros.pesquisarPorAutor("Autor2"));
+        System.out.println(catalogoLivros.pesquisarPorIntervaloAnos(2020, 2022));
+        System.out.println(catalogoLivros.pesquisarPorTitulo("Livro 1"));
     }
 
 }
